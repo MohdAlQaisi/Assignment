@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Assignment.Models.Application>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Index</h3>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApnsEnv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GcmKey)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChromeWebOrigin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChromeWebDefaultNotificationIcon)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChromeWebSubDomain)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApnsP12)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ApnsP12Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AndroidGcmSenderId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SafariApnsP12)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SafariApnsP12Password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdditionalDataIsRootPayload)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrganizationId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SiteName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SafariSiteOrigin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SafariIcon256)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ChromeKey)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApnsEnv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GcmKey)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChromeWebOrigin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChromeWebDefaultNotificationIcon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChromeWebSubDomain)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApnsP12)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApnsP12Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AndroidGcmSenderId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SafariApnsP12)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SafariApnsP12Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AdditionalDataIsRootPayload)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrganizationId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SiteName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SafariSiteOrigin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SafariIcon256)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ChromeKey)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
